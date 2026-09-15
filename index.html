@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Orixeo Activity Library - bibliotheque d'activites pedagogiques professionnelles." />
+  <title>Orixeo Activity Library</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#">ORIXEO <span>LAB</span></a>
+    <nav><a href="#catalogue">Catalogue</a><a href="#about">A propos</a></nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <p class="eyebrow">ORIXEO LEARNING</p>
+      <h1>La bibliotheque d'activites qui transforme un sujet en experience d'apprentissage.</h1>
+      <p>Des ateliers professionnels directement exploitables, avec consignes apprenant, reponses attendues et debrief formateur.</p>
+      <a class="primary" href="#catalogue">Explorer les activites</a>
+    </section>
+
+    <section class="stats" aria-label="Chiffres cles">
+      <div><strong id="count">0</strong><span>activites</span></div>
+      <div><strong>6</strong><span>domaines</span></div>
+      <div><strong>2</strong><span>vues apprenant / formateur</span></div>
+    </section>
+
+    <section id="catalogue" class="catalogue">
+      <div class="section-head"><div><p class="eyebrow">BIBLIOTHEQUE</p><h2>Trouver une activite</h2></div><p id="resultCount"></p></div>
+      <div class="filters">
+        <input id="search" type="search" placeholder="Rechercher un sujet, un mot-cle..." aria-label="Rechercher" />
+        <select id="domain" aria-label="Domaine"><option value="all">Tous les domaines</option></select>
+        <select id="format" aria-label="Format"><option value="all">Tous les formats</option></select>
+        <select id="level" aria-label="Niveau"><option value="all">Tous les niveaux</option><option>Debutant</option><option>Intermediaire</option></select>
+      </div>
+      <div id="cards" class="cards"></div>
+    </section>
+
+    <section id="about" class="about"><p class="eyebrow">PRINCIPE</p><h2>Une fiche, deux usages</h2><div class="two"><article><h3>Pour l'apprenant</h3><p>Une situation professionnelle, un objectif clair, des consignes actionnables et un template de travail.</p></article><article><h3>Pour le formateur</h3><p>Les attendus, les points de vigilance et des questions de debrief pour transformer l'exercice en apprentissage.</p></article></div></section>
+  </main>
+
+  <dialog id="activityDialog"><button class="close" aria-label="Fermer">x</button><div id="dialogContent"></div></dialog>
+  <footer>Orixeo Lab · une marque MSDG Innovation</footer>
+  <script type="module" src="app.js"></script>
+</body>
+</html>
